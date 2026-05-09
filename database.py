@@ -9,7 +9,7 @@ password = quote_plus("Ldvk@1501")
 
 #SQLALCHEMY_DATABASE_URL = f"mysql+pymysql://root:{password}@127.0.0.1:3306/todosapplicationdatabase"
 
-SQLALCHEMY_DATABASE_URL = 'sqlite:///TodoApp/todos.db'
+SQLALCHEMY_DATABASE_URL = 'sqlite:///todos.db'
 engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={'check_same_thread': False})
 
 SessionLocal = sessionmaker(autocommit= False, autoflush=False, bind=engine)

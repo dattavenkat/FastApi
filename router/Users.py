@@ -4,8 +4,8 @@ from pydantic import BaseModel, Field
 
 from typing import Annotated
 from passlib.context import CryptContext
-from ..models import Todos, Users
-from ..database import SessionLocal
+from models import Todos, Users
+from database import SessionLocal
 from starlette import status
 from .auth import get_current_user
 

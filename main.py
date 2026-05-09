@@ -1,10 +1,10 @@
 from fastapi import FastAPI, Request, status
 
-from .router import auth, todo, admin, Users
+from router import auth, todo, admin, Users
 
-from .models import Base
+from models import Base
 
-from .database import engine
+from database import engine
 
 
 
@@ -17,7 +17,7 @@ Base.metadata.create_all(bind=engine)
 
 
 
-app.mount("/static", StaticFiles(directory="TodoApp/static"), name="static")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.get("/")
 def test(request: Request):

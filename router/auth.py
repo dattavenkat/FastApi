@@ -3,8 +3,8 @@ from typing import Annotated
 from sqlalchemy.orm import Session
 from fastapi import APIRouter, Depends, HTTPException, Request
 from pydantic import BaseModel
-from ..database import SessionLocal
-from ..models import Users
+from database import SessionLocal
+from models import Users
 from passlib.context import CryptContext
 from starlette import status
 from fastapi.security import OAuth2PasswordRequestForm, OAuth2PasswordBearer
@@ -12,7 +12,7 @@ from jose import jwt, JWTError
 from fastapi.templating import Jinja2Templates
 
 
-templates = Jinja2Templates(directory="TodoApp/templates")
+templates = Jinja2Templates(directory="templates")
 
 
 SECRET_KEY = '7168c36338c7ec9ae0db1650f7322e5383947f5ae986011cc962f72b219f6125'
